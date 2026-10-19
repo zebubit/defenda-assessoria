@@ -86,6 +86,11 @@ section{padding:6rem 0}
 .person h3{font-size:1.6rem;margin:.3rem 0 1rem}
 .person .btn{width:100%;justify-content:center}
 
+/* fotos equipe e premio */
+.person img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:14px;margin:0 0 1rem}
+.premio{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.premio img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;border-radius:20px;border:1px solid var(--line)}
+@media(max-width:800px){.premio{grid-template-columns:1fr}}
 /* honest box */
 .honest{border:1px solid var(--gold);border-radius:20px;padding:2rem;background:linear-gradient(160deg,rgba(246,133,0,.08),transparent)}
 .honest ul{list-style:none;display:grid;gap:.7rem;margin-top:1rem;color:var(--mute)}
@@ -179,9 +184,14 @@ footer a.z{color:#e6bd4f;font-weight:600}
   <div class="head rv"><div class="eyebrow">Nossa equipe</div><h2>Fale direto com <span class="grad">quem resolve</span></h2></div>
   <div class="team">
     <div class="person rv"><div class="av">G</div><small>Perícia de crédito</small><h3>Gabriel</h3><a class="btn btn-gold" data-wa="Olá Gabriel! Vim pelo seu site e quero uma perícia do meu crédito." data-num="5566996582008" href="#">Falar com o Gabriel</a></div>
-    <div class="person rv"><div class="av">G</div><small>Departamento financeiro</small><h3>Dra. Gisili Machado</h3><a class="btn btn-gold" data-wa="Olá Dra. Gisili! Vim pelo seu site e quero falar com o financeiro." data-num="5566996022008" href="#">Falar com a Dra. Gisili</a></div>
-    <div class="person rv"><div class="av">M</div><small>Direção executiva</small><h3>Machado</h3><a class="btn btn-gold" data-wa="Olá! Vim pelo seu site e quero falar com a direção." data-num="5566996932008" href="#">Falar com a direção</a></div>
+    <div class="person rv"><img src="assets/fotos/gisili.webp" alt="Dra. Gisili Machado" width="640" height="657" loading="lazy"><small>Departamento financeiro</small><h3>Dra. Gisili Machado</h3><a class="btn btn-gold" data-wa="Olá Dra. Gisili! Vim pelo seu site e quero falar com o financeiro." data-num="5566996022008" href="#">Falar com a Dra. Gisili</a></div>
+    <div class="person rv"><img src="assets/fotos/machado.webp" alt="Machado, diretor executivo" width="640" height="593" loading="lazy"><small>Direção executiva</small><h3>Machado</h3><a class="btn btn-gold" data-wa="Olá! Vim pelo seu site e quero falar com a direção." data-num="5566996932008" href="#">Falar com a direção</a></div>
   </div>
+</div></section>
+
+<section><div class="wrap premio">
+  <img class="rv" src="assets/fotos/premiacao.webp" alt="Equipe da Defenda no Prêmio Troféu Destaque Mato Grosso" width="800" height="1158" loading="lazy">
+  <div class="rv"><div class="eyebrow">Reconhecimento</div><h2 style="font-size:clamp(2rem,4.4vw,3rem);margin:.7rem 0 1rem">Troféu Destaque <span class="grad">Mato Grosso</span></h2><p style="color:var(--mute)">A Defenda Assessoria Financeira no Prêmio Troféu Destaque Mato Grosso, com certificado e troféu. Um reconhecimento ao trabalho de 18 anos ajudando pessoas e empresas a reorganizar o crédito.</p></div>
 </div></section>
 
 <section class="steps"><div class="wrap">
