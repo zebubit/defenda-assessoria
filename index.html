@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Defenda Assessoria Financeira | Reestruturação de Crédito</title>
+<meta name="description" content="Há 18 anos ajudando pessoas e empresas a reorganizar o crédito: análise do CPF/CNPJ, regularização de pendências e orientação financeira. Atendimento no Edifício Work Tower e online para todo o Brasil.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="assets/logo-defenda.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#000;--navy:#0c2d53;--navy2:#081f3a;--gold:#f68500;--gold2:#d27607;--gold3:#ffb347;--white:#fff;--mute:#b9c4d4;--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:Montserrat,system-ui,sans-serif;line-height:1.6;overflow-x:hidden;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:700;line-height:1.1}
+.grad{background:linear-gradient(90deg,var(--gold3),var(--gold),var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 1.6rem;border-radius:999px;font-weight:700;font-size:.95rem;letter-spacing:.02em;transition:transform .25s,box-shadow .25s;min-height:48px}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:linear-gradient(135deg,var(--gold3),var(--gold) 55%,var(--gold2));color:#1a0f00;box-shadow:0 10px 30px rgba(246,133,0,.28)}
+.btn-line{border:1.5px solid var(--gold);color:var(--white)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s;padding:.9rem 0}
+nav.s{background:rgba(0,0,0,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+nav img{height:44px;width:auto;mix-blend-mode:screen}
+nav .links{display:flex;gap:1.8rem;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+nav .links a{color:var(--mute);transition:color .2s}
+nav .links a:hover{color:var(--gold)}
+nav .btn{padding:.7rem 1.2rem;font-size:.85rem;min-height:44px}
+@media(max-width:860px){nav .links{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:7rem 0 5rem;background:var(--black);isolation:isolate;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 85% 90%,rgba(12,45,83,.95),transparent 70%),radial-gradient(600px 400px at 100% 100%,rgba(246,133,0,.18),transparent 70%);z-index:-1}
+.hero .wave{position:absolute;right:-8%;bottom:-6%;width:70%;max-width:760px;opacity:.9;z-index:-1;transform:translateY(var(--py,0))}
+.hero h1{font-size:clamp(2.6rem,7vw,5.2rem);margin:1rem 0 1.4rem;max-width:14ch}
+.hero p.lead{color:var(--mute);font-size:1.08rem;max-width:52ch;margin-bottom:2rem}
+.hero .cta{display:flex;flex-wrap:wrap;gap:.9rem}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2.4rem}
+.chip{border:1px solid var(--line);border-radius:999px;padding:.45rem .95rem;font-size:.78rem;color:var(--mute);background:rgba(255,255,255,.03)}
+
+/* numbers */
+.nums{background:linear-gradient(180deg,var(--navy2),var(--navy));border-block:1px solid var(--line)}
+.nums .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding-block:2.6rem;text-align:center}
+.nums b{display:block;font-family:"Cormorant Garamond",serif;font-size:clamp(2rem,5vw,3.2rem);color:var(--gold3)}
+.nums span{font-size:.8rem;color:var(--mute);letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:700px){.nums .wrap{grid-template-columns:repeat(2,1fr);row-gap:1.6rem}}
+
+section{padding:6rem 0}
+.head{max-width:62ch;margin-bottom:3rem}
+.head h2{font-size:clamp(2rem,4.6vw,3.2rem);margin:.7rem 0 1rem}
+.head p{color:var(--mute)}
+
+/* services */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem}
+.card{background:linear-gradient(160deg,rgba(12,45,83,.55),rgba(0,0,0,.4));border:1px solid var(--line);border-radius:20px;padding:1.8rem;display:flex;flex-direction:column;gap:.8rem;transition:transform .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.card .ic{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--gold3),var(--gold2));display:grid;place-items:center;color:#1a0f00}
+.card .ic svg{width:24px;height:24px}
+.card h3{font-size:1.65rem}
+.card p{color:var(--mute);font-size:.94rem;flex:1}
+.card a.more{color:var(--gold3);font-weight:700;font-size:.9rem;display:inline-flex;gap:.4rem;align-items:center;min-height:44px}
+
+/* steps */
+.steps{background:var(--navy2);border-block:1px solid var(--line)}
+.step-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.4rem;counter-reset:s}
+.step{position:relative;padding:1.6rem 1.4rem 1.6rem;border-left:2px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 16px 16px 0}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:"Cormorant Garamond",serif;font-size:2.6rem;color:var(--gold);display:block;line-height:1}
+.step h3{font-size:1.4rem;margin:.4rem 0}
+.step p{color:var(--mute);font-size:.92rem}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.person{border:1px solid var(--line);border-radius:20px;padding:1.8rem;background:rgba(255,255,255,.03);text-align:center}
+.person .av{width:84px;height:84px;margin:0 auto 1rem;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy2));border:2px solid var(--gold);display:grid;place-items:center;font-family:"Cormorant Garamond",serif;font-size:2rem;color:var(--gold3)}
+.person small{display:block;color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;font-weight:600}
+.person h3{font-size:1.6rem;margin:.3rem 0 1rem}
+.person .btn{width:100%;justify-content:center}
+
+/* honest box */
+.honest{border:1px solid var(--gold);border-radius:20px;padding:2rem;background:linear-gradient(160deg,rgba(246,133,0,.08),transparent)}
+.honest ul{list-style:none;display:grid;gap:.7rem;margin-top:1rem;color:var(--mute)}
+.honest li::before{content:"✓";color:var(--gold);font-weight:700;margin-right:.6rem}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:1.2rem 0}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:1rem;min-height:44px;align-items:center}
+summary::after{content:"+";color:var(--gold);font-size:1.5rem}
+details[open] summary::after{content:"–"}
+details p{color:var(--mute);margin-top:.7rem;max-width:70ch}
+
+/* social proof / location */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+@media(max-width:800px){.two{grid-template-columns:1fr}}
+.panel{border:1px solid var(--line);border-radius:20px;padding:2rem;background:rgba(255,255,255,.03);display:flex;flex-direction:column;gap:1rem}
+.panel h3{font-size:1.7rem}
+.panel p{color:var(--mute)}
+.stars{color:var(--gold3);letter-spacing:.2em;font-size:1.2rem}
+.ig{background:linear-gradient(45deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888);color:#fff}
+.gbtn{background:#fff;color:#202124}
+.gbtn svg{width:20px;height:20px}
+
+/* final cta */
+.final{text-align:center;background:radial-gradient(700px 300px at 50% 0,rgba(246,133,0,.18),transparent 70%),var(--navy2)}
+.final h2{font-size:clamp(2.2rem,5vw,3.6rem);max-width:18ch;margin:0 auto 1.2rem}
+.final p{color:var(--mute);max-width:56ch;margin:0 auto 2rem}
+footer{padding:2.4rem 0 6rem;border-top:1px solid var(--line);color:var(--mute);font-size:.82rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+footer a.z{color:#e6bd4f;font-weight:600}
+
+/* floating wa */
+.fab{position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 28px rgba(0,0,0,.5)}
+.fab svg{width:32px;height:32px;fill:#fff}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap">
+  <a href="#topo"><img src="assets/logo-defenda.png" alt="Defenda Assessoria Financeira"></a>
+  <div class="links"><a href="#servicos">Serviços</a><a href="#como">Como funciona</a><a href="#equipe">Equipe</a><a href="#duvidas">Dúvidas</a><a href="#contato">Contato</a></div>
+  <a class="btn btn-gold" data-wa="Olá! Vim pelo seu site e quero falar com um especialista." href="#">Falar agora</a>
+</div></nav>
+
+<header class="hero" id="topo">
+  <svg class="wave" id="wave" viewBox="0 0 600 400" fill="none" aria-hidden="true"><path d="M0 400C120 330 200 120 330 90c110-25 200 25 270 -10V400Z" fill="#d27607"/><path d="M40 400C150 350 230 170 350 140c90-22 170 18 250 -4V400Z" fill="#0c2d53"/></svg>
+  <div class="wrap">
+    <div class="eyebrow rv">Reestruturação de crédito</div>
+    <h1 class="rv">Seu crédito de volta <span class="grad">com método e transparência.</span></h1>
+    <p class="lead rv">Há 18 anos a Defenda ajuda pessoas e empresas a entender o que trava o crédito, regularizar pendências e voltar ao mercado com segurança. Atendimento presencial e online para todo o Brasil.</p>
+    <div class="cta rv">
+      <a class="btn btn-gold" data-wa="Olá! Vim pelo seu site e quero uma análise do meu CPF/CNPJ." href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.200-3.4-8.300Zm-8.500 18.300c-1.800 0-3.500-.5-5-1.400l-.4-.2-3.800 1 1-3.700-.2-.4a9.900 9.900 0 0 1-1.500-5.300C2.200 6.500 6.600 2.100 12 2.100c2.600 0 5.100 1 6.900 2.900a9.700 9.700 0 0 1 2.900 6.900c0 5.400-4.400 9.900-9.800 9.900Zm5.400-7.400c-.3-.1-1.800-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.200c-.2.200-.4.200-.7.100a8 8 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2 0-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.400-.3.300-1.100 1.100-1.100 2.600s1.100 3 1.300 3.200c.2.200 2.200 3.400 5.300 4.700 2 .8 2.700.9 3.700.7.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.1-.3-.2-.6-.3Z"/></svg>Quero uma análise gratuita</a>
+      <a class="btn btn-line" href="#servicos">Ver serviços</a>
+    </div>
+    <div class="chips rv"><span class="chip">Consultoria personalizada</span><span class="chip">Equipe especializada</span><span class="chip">Contrato claro por escrito</span></div>
+  </div>
+</header>
+
+<div class="nums"><div class="wrap">
+  <div class="rv"><b data-n="18">0</b><span>anos de atuação</span></div>
+  <div class="rv"><b>5,0 ★</b><span>no Google</span></div>
+  <div class="rv"><b>6 mil+</b><span>seguidores no Instagram</span></div>
+  <div class="rv"><b>Brasil</b><span>atendimento em todo o país</span></div>
+</div></div>
+
+<section id="servicos"><div class="wrap">
+  <div class="head rv"><div class="eyebrow">O que fazemos</div><h2>Soluções para <span class="grad">reorganizar sua vida financeira</span></h2><p>Cada caso é analisado individualmente. Primeiro entendemos sua situação, depois indicamos o caminho e os prazos reais.</p></div>
+  <div class="cards">
+    <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.500 8 8 9 4.500-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Regularização de CPF e CNPJ</h3><p>Análise das pendências e apontamentos e condução do processo para regularizar sua situação, dentro da lei.</p><a class="more" data-wa="Olá! Vim pelo seu site e quero regularizar meu CPF/CNPJ." href="#">Quero regularizar →</a></article>
+    <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 9 11l4 4 8-8"/><path d="M15 7h6v6"/></svg></div><h3>Rating e score de crédito</h3><p>Identificamos o que pesa na sua pontuação e orientamos ações para melhorar suas chances de aprovação.</p><a class="more" data-wa="Olá! Vim pelo seu site e quero melhorar meu score e rating." href="#">Quero melhorar meu score →</a></article>
+    <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg></div><h3>Acesso a crédito</h3><p>Apoio para organizar documentos e perfil para buscar financiamentos, cartões e empréstimos.</p><a class="more" data-wa="Olá! Vim pelo seu site e quero ajuda para liberar crédito." href="#">Quero crédito →</a></article>
+    <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></div><h3>Consultoria e perícia financeira</h3><p>Orientação personalizada, análise de contratos e dívidas para você decidir com clareza.</p><a class="more" data-wa="Olá! Vim pelo seu site e quero uma consultoria financeira." href="#">Quero uma consultoria →</a></article>
+  </div>
+</div></section>
+
+<section class="steps" id="como"><div class="wrap">
+  <div class="head rv"><div class="eyebrow">Como funciona</div><h2>Do primeiro contato ao <span class="grad">acompanhamento</span></h2></div>
+  <div class="step-grid">
+    <div class="step rv"><h3>Conversa e análise</h3><p>Você conta sua situação e fazemos o levantamento do CPF ou CNPJ.</p></div>
+    <div class="step rv"><h3>Plano e proposta</h3><p>Explicamos o que dá para fazer, o prazo estimado e o valor, tudo por escrito.</p></div>
+    <div class="step rv"><h3>Execução</h3><p>Nossa equipe conduz o processo e mantém você informado a cada etapa.</p></div>
+    <div class="step rv"><h3>Acompanhamento</h3><p>Seguimos orientando para você manter o crédito organizado depois.</p></div>
+  </div>
+</div></section>
+
+<section id="equipe"><div class="wrap">
+  <div class="head rv"><div class="eyebrow">Nossa equipe</div><h2>Fale direto com <span class="grad">quem resolve</span></h2></div>
+  <div class="team">
+    <div class="person rv"><div class="av">G</div><small>Perícia de crédito</small><h3>Gabriel</h3><a class="btn btn-gold" data-wa="Olá Gabriel! Vim pelo seu site e quero uma perícia do meu crédito." data-num="5566996582008" href="#">Falar com o Gabriel</a></div>
+    <div class="person rv"><div class="av">G</div><small>Departamento financeiro</small><h3>Dra. Gisili Machado</h3><a class="btn btn-gold" data-wa="Olá Dra. Gisili! Vim pelo seu site e quero falar com o financeiro." data-num="5566996022008" href="#">Falar com a Dra. Gisili</a></div>
+    <div class="person rv"><div class="av">M</div><small>Direção executiva</small><h3>Machado</h3><a class="btn btn-gold" data-wa="Olá! Vim pelo seu site e quero falar com a direção." data-num="5566996932008" href="#">Falar com a direção</a></div>
+  </div>
+</div></section>
+
+<section class="steps"><div class="wrap">
+  <div class="honest rv">
+    <div class="eyebrow">Nosso compromisso</div>
+    <h2 style="font-size:clamp(1.8rem,4vw,2.6rem);margin-top:.6rem">Transparência desde o primeiro contato</h2>
+    <ul>
+      <li>Contrato por escrito com serviço, prazo e valor definidos antes de começar.</li>
+      <li>Prazos são estimativas: dependem de cada pendência e dos órgãos envolvidos.</li>
+      <li>Trabalhamos dentro da lei e não prometemos o que não podemos cumprir.</li>
+      <li>Você acompanha cada etapa direto com nossa equipe.</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="duvidas"><div class="wrap" style="max-width:820px">
+  <div class="head rv"><div class="eyebrow">Dúvidas frequentes</div><h2>Antes de <span class="grad">falar com a gente</span></h2></div>
+  <details class="rv"><summary>A análise inicial tem custo?</summary><p>Fale com a equipe pelo WhatsApp para saber como funciona a análise do seu caso.</p></details>
+  <details class="rv"><summary>Quanto tempo leva o processo?</summary><p>Depende de cada situação. Depois da análise passamos uma estimativa realista, sem promessas de prazo fixo.</p></details>
+  <details class="rv"><summary>Vocês atendem fora da cidade?</summary><p>Sim. Atendemos online para todo o Brasil e também presencialmente no Edifício Work Tower.</p></details>
+  <details class="rv"><summary>Atendem empresas (CNPJ)?</summary><p>Sim. Cuidamos de CPF e de CNPJ, inclusive para quem precisa de crédito para o negócio.</p></details>
+  <details class="rv"><summary>Posso falar com alguém antes de contratar?</summary><p>Claro. É só chamar um dos especialistas da equipe e tirar suas dúvidas, sem compromisso.</p></details>
+</div></section>
+
+<section id="contato" style="padding-top:0"><div class="wrap two">
+  <div class="panel rv"><div class="stars">★★★★★</div><h3>Avalie a Defenda no Google</h3><p>Já foi atendido por nós? Sua avaliação ajuda outras pessoas a nos encontrar.</p>
+    <a class="btn gbtn" target="_blank" rel="noopener" href="https://share.google/c1GyiQoQb5G2dk5ib"><svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.500c3.500 0 6.600 1.200 9.100 3.600l6.800-6.800C35.800 2.400 30.300 0 24 0 14.600 0 6.500 5.400 2.600 13.200l7.900 6.100C12.400 13.600 17.700 9.500 24 9.500Z"/><path fill="#4285F4" d="M46.500 24.500c0-1.600-.1-3.100-.4-4.500H24v9h12.700c-.6 3-2.300 5.500-4.800 7.200l7.500 5.800c4.400-4.100 7.100-10.100 7.100-17.500Z"/><path fill="#FBBC05" d="M10.500 28.700A14.500 14.500 0 0 1 9.500 24c0-1.600.3-3.200.8-4.700l-7.900-6.100A24 24 0 0 0 0 24c0 3.900.9 7.500 2.600 10.800l7.900-6.100Z"/><path fill="#34A853" d="M24 48c6.500 0 11.900-2.100 15.900-5.800l-7.500-5.800c-2.100 1.400-4.800 2.300-8.400 2.300-6.300 0-11.600-4.100-13.500-9.800l-7.900 6.100C6.500 42.600 14.600 48 24 48Z"/></svg>Avaliar no Google</a>
+  </div>
+  <div class="panel rv"><h3>Acompanhe no Instagram</h3><p>Dicas de crédito, score e organização financeira todo dia, no perfil <b>@defenda_assessoriafinanceira</b>.</p>
+    <a class="btn ig" target="_blank" rel="noopener" href="https://www.instagram.com/defenda_assessoriafinanceira/">Seguir no Instagram</a>
+  </div>
+  <div class="panel rv" style="grid-column:1/-1"><h3>Onde estamos</h3><p>Edifício Work Tower. Atendimento presencial com hora marcada e online para todo o Brasil. Horário: segunda a sexta, até as 18h.</p>
+    <a class="btn btn-line" target="_blank" rel="noopener" href="https://share.google/c1GyiQoQb5G2dk5ib">Abrir no Google Maps</a>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2 class="rv">Vamos entender o <span class="grad">seu caso?</span></h2>
+  <p class="rv">Chame um especialista pelo WhatsApp e receba uma orientação clara sobre o melhor caminho para o seu crédito.</p>
+  <a class="btn btn-gold rv" data-wa="Olá! Vim pelo seu site e quero entender meu caso." href="#">Falar com um especialista</a>
+</div></section>
+
+<footer><div class="wrap">
+  <span>© <span id="y"></span> Defenda Assessoria Financeira. Todos os direitos reservados.</span>
+  <a class="z" target="_blank" rel="noopener" href="https://wa.me/5534993421500?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Defenda%20e%20quero%20um%20site%20premium%20igual%20para%20mim.">Desenvolvido por Zebubit Assessoria</a>
+</div></footer>
+
+<a class="fab" data-wa="Olá! Vim pelo seu site e quero falar com um especialista." href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M20.500 3.500A11.800 11.800 0 0 0 12 0C5.400 0 .1 5.300.1 11.900c0 2.100.6 4.100 1.600 5.900L0 24l6.400-1.700a11.900 11.900 0 0 0 5.600 1.400c6.600 0 11.900-5.300 11.900-11.900 0-3.200-1.200-6.200-3.400-8.300Z"/></svg></a>
+
+<script>
+const DEFAULT_NUM="5566996932008";
+document.querySelectorAll("[data-wa]").forEach(a=>{
+  const n=a.dataset.num||DEFAULT_NUM;
+  a.href="https://wa.me/"+n+"?text="+encodeURIComponent(a.dataset.wa);
+  a.target="_blank";a.rel="noopener";
+});
+document.getElementById("y").textContent=new Date().getFullYear();
+const nav=document.getElementById("nav");
+const onS=()=>nav.classList.toggle("s",scrollY>40);onS();addEventListener("scroll",onS,{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+// contador
+const c=document.querySelector("[data-n]");
+if(c){const t=+c.dataset.n;const ob=new IntersectionObserver(([e])=>{if(!e.isIntersecting)return;let i=0;const id=setInterval(()=>{i++;c.textContent=i;if(i>=t)clearInterval(id)},60);ob.disconnect()});ob.observe(c)}
+// parallax só desktop
+if(matchMedia("(min-width:1024px) and (pointer:fine)").matches&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+  const w=document.getElementById("wave");
+  addEventListener("scroll",()=>{w.style.setProperty("--py",(scrollY*.12)+"px")},{passive:true});
+}
+</script>
+</body>
+</html>
